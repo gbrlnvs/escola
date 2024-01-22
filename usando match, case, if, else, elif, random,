@@ -1,0 +1,47 @@
+import random
+nome_pais=str(input('Os nome completo dos responsáveis:'))
+nome_aluno=str(input('Insira o nome completo do Aluno'))
+cpf=float(input('digite o CPF: (sem os pontos)'))
+email=str(input('digite seu e-mail:'))
+idade=int(input('digite sua idade:'))
+if idade >=16:
+    print('Precisa enviar nota do enem')
+    nota_enem=int(input('Digite sua nota do enem:'))
+else:
+    print('Não precisa a nota do enem, vamos continuar na matrícula')
+
+if nota_enem >=500:
+    print('Você tirou a mais que a média')
+elif nota_enem ==499:
+    print(' Você quase atingiu a média')
+else:
+    print('você não atingiu a média')
+
+renda_familiar= int(input('Qual sua renda familiar?'))
+if renda_familiar <= 1500:
+    print( 'Ótimo, você conseguiu uma bolsa de 100% perante a sua renda')
+elif renda_familiar <= 3000:
+    print('Você conseguiu uma bolsa de 50% perante a sua renda')
+elif renda_familiar <= 4500:    
+    print( 'Você conseguiu bolsa de 30% perante a sua renda. ')
+else:
+    print('Infelizmente não tem bolsa pra você')
+
+
+formacao=int(input('Quantos anos seu filho tem?'))
+if formacao <=10:
+        print(input(' Seu filho está no ensino fundamental, corretO? 1-sim \n 2-nao'))
+        teste=input('Qual série ele está?')
+elif formacao >= 15:
+        print(input(' Seu filho está no ensino médio, corretO? 1-sim \n 2-nao'))
+        teste=input('Qual série ele está?')
+else:
+        print('Reveja o cadastro')
+
+
+escolha = int(input("1 - numero da matricula\n 2- visite o portal do aluno"))
+match escolha:
+     case 1:
+          print(random.randint(0,500))
+     case 2:
+          print('wwww.google.com')
